@@ -42,6 +42,15 @@ st.markdown(
     header[data-testid="stHeader"] { display: none; }
     div[data-testid="stToolbar"] { display: none; }
 
+    a[href*="github.com"] {
+    display: none !important;
+    }
+
+    /* Edit this app */
+    button[title="Edit this app"] {
+        display: none !important;
+    }
+
     .main .block-container { padding-top: 1.7rem; padding-bottom: 2rem; }
     h1 { font-weight: 800; }
     h2, h3 { margin-top: 1.2rem; }
