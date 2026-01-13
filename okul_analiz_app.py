@@ -29,6 +29,12 @@ except Exception:
 # if st.query_params.get("embed") != "true":
 #     st.query_params["embed"] = "true"
 #     st.rerun()
+
+params = dict(st.query_params)
+if params.get("embed") != "true":
+    st.info("Daha temiz görünüm için uygulamayı Embed modda açabilirsiniz.")
+    st.link_button("Embed modda aç", "?embed=true")
+
 # -------------------- SAYFA AYARLARI --------------------
 st.set_page_config(
     page_title="Okul Konum Analiz Pro (Best)",
