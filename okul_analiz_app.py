@@ -1329,6 +1329,19 @@ st.caption(
     "en yakın mahalle(ler) arasından seçilir."
 )
 
+st.markdown(
+    """
+    <hr>
+    <div style="text-align:center; font-size:14px; color:#555;">
+        <b>İletişim</b><br>
+        📧 <a href="mailto:olgunugurlu@gmail.com">olgunugurlu@gmail.com</a><br>
+        🏫 Gazi Mesleki ve Teknik Anadolu Lisesi
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 base_for_dept2 = full_df.dropna(subset=["Enlem", "Boylam"]).copy()
 
 if base_for_dept2.empty or "Alan / Dal" not in base_for_dept2.columns:
