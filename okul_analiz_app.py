@@ -39,12 +39,13 @@ st.set_page_config(
 st.markdown(
     """
 <style>
-    header {visibility: hidden;}
+    header[data-testid="stHeader"] { display: none; }
+    div[data-testid="stToolbar"] { display: none; }
+
     .main .block-container { padding-top: 1.7rem; padding-bottom: 2rem; }
     h1 { font-weight: 800; }
     h2, h3 { margin-top: 1.2rem; }
 
-    /* Sidebar: siyah tema */
     section[data-testid="stSidebar"] {
         background-color: #000000 !important;
         color: #ffffff !important;
@@ -58,7 +59,6 @@ st.markdown(
         color: #ffffff !important;
     }
 
-    /* Sidebar inputlar okunabilir olsun */
     section[data-testid="stSidebar"] .stTextInput input,
     section[data-testid="stSidebar"] .stNumberInput input,
     section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
@@ -67,7 +67,6 @@ st.markdown(
         border-radius: 10px !important;
     }
 
-    /* Sidebar buton */
     section[data-testid="stSidebar"] .stButton button {
         width: 100%;
         background-color: #1f77b4;
@@ -85,13 +84,13 @@ st.markdown(
         box-shadow: 0 4px 12px rgba(255,255,255,0.18);
     }
 
-    /* Küçük iyileştirmeler */
     div[data-testid="stMetricValue"] { font-size: 1.8rem; font-weight: 800; }
     hr { margin: 1.5rem 0; border: none; height: 2px; background: linear-gradient(90deg, transparent, #1f77b4, transparent); }
 </style>
 """,
     unsafe_allow_html=True,
 )
+
 
 # -------------------- SABİTLER --------------------
 TARGET_CITY = "Eskişehir"
