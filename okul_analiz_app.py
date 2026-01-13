@@ -654,7 +654,7 @@ def create_comparison_table(df: pd.DataFrame, category_col: str, radius: float) 
 # =========================================================
 # UI
 # =========================================================
-st.title("🏫 Okul Konum Analiz Pro (Best)")
+st.title("🏫 Okul Konum Analiz Pro")
 
 with st.sidebar:
     st.markdown("### 🔍 Adres Bulucu")
@@ -792,6 +792,7 @@ with st.sidebar:
 
     st.divider()
     with st.expander("📍 Okul Koordinatları", expanded=True):
+
         st.session_state["curr_name"] = st.text_input("Mevcut Ad", st.session_state["curr_name"])
         st.session_state["curr_lat"] = st.number_input("Mevcut Lat", value=curr_lat_n, format="%.6f")
         st.session_state["curr_lon"] = st.number_input("Mevcut Lon", value=curr_lon_n, format="%.6f")
@@ -799,6 +800,27 @@ with st.sidebar:
         st.session_state["cand_name"] = st.text_input("Aday Ad", st.session_state["cand_name"])
         st.session_state["cand_lat"] = st.number_input("Aday Lat", value=cand_lat_n, format="%.6f")
         st.session_state["cand_lon"] = st.number_input("Aday Lon", value=cand_lon_n, format="%.6f")
+    
+    st.markdown("---")
+
+    st.markdown(
+        """
+        <div style="
+            text-align: center;
+            font-size: 13px;
+            color: #dddddd;
+            line-height: 1.6;
+            padding-top: 10px;
+        ">
+            <b>İletişim</b><br>
+            📧 <a href="mailto:olgunugurlu@gmail.com" style="color:#4da3ff;">
+                olgunugurlu@gmail.com
+            </a><br>
+            🏫 Gazi Mesleki ve Teknik Anadolu Lisesi
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 
 # Re-normalize after user inputs (applies to all calculations & maps)
@@ -1329,17 +1351,7 @@ st.caption(
     "en yakın mahalle(ler) arasından seçilir."
 )
 
-st.markdown(
-    """
-    <hr>
-    <div style="text-align:center; font-size:14px; color:#555;">
-        <b>İletişim</b><br>
-        📧 <a href="mailto:olgunugurlu@gmail.com">olgunugurlu@gmail.com</a><br>
-        🏫 Gazi Mesleki ve Teknik Anadolu Lisesi
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+
 
 
 base_for_dept2 = full_df.dropna(subset=["Enlem", "Boylam"]).copy()
