@@ -40,7 +40,7 @@ st.markdown(
     """
 <style>
     header[data-testid="stHeader"] { display: none; }
-    div[data-testid="stToolbar"] { display: none; }
+    div[data-testid="stToolbarActionButtonIcon"] { display: none; }
 
     a[href*="github.com"] {
     display: none !important;
