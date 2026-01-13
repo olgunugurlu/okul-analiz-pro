@@ -39,17 +39,16 @@ st.set_page_config(
 st.markdown(
     """
 <style>
-    header[data-testid="stHeader"] { display: none; }
-    div[data-testid="stToolbarActionButtonIcon"] { display: none; }
+    /* Üst barı komple kapat */
+    header[data-testid="stHeader"] { display: none !important; }
+    div[data-testid="stToolbar"] { display: none !important; }
 
-    a[href*="github.com"] {
-    display: none !important;
-    }
+    /* Sağ üst action butonları (senin paylaştığın div) */
+    div[data-testid="stToolbarActionButton"] { display: none !important; }
+    .stToolbarActionButton { display: none !important; }
 
-    /* Edit this app */
-    button[title="Edit this app"] {
-        display: none !important;
-    }
+    /* Bazı sürümlerde üstteki container farklı gelebiliyor */
+    [data-testid="stHeaderActionElements"] { display: none !important; }
 
     .main .block-container { padding-top: 1.7rem; padding-bottom: 2rem; }
     h1 { font-weight: 800; }
