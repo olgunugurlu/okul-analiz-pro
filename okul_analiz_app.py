@@ -39,6 +39,7 @@ st.set_page_config(
 st.markdown(
     """
 <style>
+    header {visibility: hidden;}
     .main .block-container { padding-top: 1.7rem; padding-bottom: 2rem; }
     h1 { font-weight: 800; }
     h2, h3 { margin-top: 1.2rem; }
