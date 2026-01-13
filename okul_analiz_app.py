@@ -26,9 +26,9 @@ except Exception:
 # =========================================================
 # Okul Konum Analiz Pro - Birleştirilmiş "En İyi" Sürüm
 # =========================================================
-if st.query_params.get("embed") != "true":
-    st.query_params["embed"] = "true"
-    st.rerun()
+# if st.query_params.get("embed") != "true":
+#     st.query_params["embed"] = "true"
+#     st.rerun()
 # -------------------- SAYFA AYARLARI --------------------
 st.set_page_config(
     page_title="Okul Konum Analiz Pro (Best)",
